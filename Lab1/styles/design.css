@@ -2,16 +2,10 @@
 html {
   background-color: white;
 }
-h2 {
-text-align:center;	
-padding:20px 0;
-
-}
 h3 {
   height: 100%;
-  color: #777;
+  color: black;
   line-height: 1.8;
-  background-color: #3CBC8D;
 }
 
 input[type=text]{
