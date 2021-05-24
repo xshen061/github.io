@@ -1,3 +1,7 @@
+
+html {
+  background-color: white;
+}
 h2 {
 text-align:center;	
 padding:20px 0;
@@ -30,6 +34,17 @@ textarea{
 	border-radius:4px;
 	background-color:#f8f8f8;
 	resize:none;
+}
+/* Defining styling for a specific element type - large block buttons */
+.block {
+  display: block;
+  width: 100%;
+  border: none;
+  background-color: #ffff66;  /* yellow */
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
 }	
 .content{
 	max-width:600px;
