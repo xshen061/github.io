@@ -112,8 +112,8 @@ function restrictListProducts(prods, restriction) {
 }
 
 // Calculate the total price of items, with received parameter being a list of products
-function getTotalPrice(chosenProducts) {
- 	var totalPrice=0;
+function getTotalPrice(priceList) {
+/*  	var totalPrice=0;
 	let prodList=[];
 	var prod;
 	
@@ -125,7 +125,17 @@ function getTotalPrice(chosenProducts) {
 		if (prodList.indexOf(products[i].name) > -1){
 			totalPrice += products[i].price;
 		}
-	} 
+	}  */
+	totalPrice = 0;
+/*	for (let i=0; i<products.length; i+=1) {
+ 		
+			totalPrice += products[i].price;
+		} 
+	}*/
+		for (let i=0; i<priceList.length; i+=1) {
 
+		totalPrice += priceList[i];
+		}	
+	
 	return totalPrice;
 }
