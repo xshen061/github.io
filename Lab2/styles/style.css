@@ -37,10 +37,11 @@
 }
 
 .shop{
+	text-align: center;
 	font-size: 50px;
 	color: navy;
 }
-#sig{
+.sig{
   text-align: right;
   color: navy;
   font-size: small;
@@ -49,4 +50,21 @@
   right:10px;
   bottom:10px;
   height:100px;
+}
+
+h4{
+	font: italic bold;
+}
+h5{
+	color: red;
+}
+
+.order{
+background-color: #04AA6D;	
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
 }

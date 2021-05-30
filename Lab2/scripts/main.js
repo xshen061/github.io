@@ -79,7 +79,8 @@ function selectedItems(){
 	var priceList=[];
 	var c = document.getElementById('displayCart');
 	c.innerHTML = "";
-	
+	// Code for “add done" inspired by https://stackoverflow.com/questions/47479365/when-you-click-on-the-button-display-a-message/47479494
+	document.getElementById("texto").innerHTML="added done";
 	// build list of selected item
 	var para = document.createElement("P");
 	para.innerHTML = "You selected : ";
