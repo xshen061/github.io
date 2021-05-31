@@ -46,12 +46,11 @@
   color: navy;
   font-size: small;
   font-style: italic;
-  position:fixed;
+  position:relative;
   right:10px;
   bottom:10px;
   height:100px;
 }
-
 h4{
 	font: italic bold;
 }
@@ -67,4 +66,20 @@ background-color: #04AA6D;
   text-align: center;
   text-decoration: none;
   display: inline-block;
+}
+body, html {
+  height: 100%;
+}
+
+.bg {
+  /* The image used */
+
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
