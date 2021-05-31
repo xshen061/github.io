@@ -89,6 +89,9 @@ function restrictListProducts(prods, restriction) {
 		else if ((restriction == "nutfree") && (prods[i].nutfree == true)){
 			product_names.push(prods[i].name);
 		}
+		else if ((restriction == "both") && (prods[i].nutfree == true) && (prods[i].lactosefree == true)){
+			product_names.push(prods[i].name);
+		}
 		else if ((restriction == "organic") && (prods[i].organic == true)){
 			product_names.push(prods[i].name);
 		}
