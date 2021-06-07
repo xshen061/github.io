@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<! This style sheet is taken from  https://www.w3schools.com/howto/howto_js_tabs.asp>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEG3125 Lab SHOP</title>
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+<div class="shop">SEG3125Lab SHOP</div>
+
+<!-- Tab links, each one with an onclick event associated with it -->
+<div class="tab">
+  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+</div>
+
+<!-- Tab content -->
+<div id="Client" class="tabcontent">
+  <h3>Client Information</h3>
+  <p>Tell us a bit about you.</p>
+	Choose a Preference:
+	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<option value=""></option>
+	<option value="lactosefree">lactose-intolerant</option>
+    <option value="nutfree">nutfree</option>
+	<option value="both">both lactose-free and nutfree</option>
+	<option value="organic">organic</option>
+    <option value="None">None</option>
+	</select>
+</div>
+
+<div id="Products" class="tabcontent">
+  <h3>Your targeted products</h3>
+  <h4>We preselected products based on your restrictions.</h4>
+	 Choose items to buy:
+	 <p></p>
+	 <div id="displayProduct"></div>
+	 <p></p>
+	 <button id="addCart" type="button" class="button order" onclick="selectedItems()">
+		Add selected items to cart.
+	</button>
+	<h5 id="texto"></h5>
+</div>
+
+<div id="Cart" class="tabcontent">
+  <h3>Cart</h3>
+  <p>Here is your cart.</p>
+  <div id="displayCart"></div>
+  <p></p>
+<button id="complete" type="button" class="button order" >
+		Complete Order
+	</button>
+</div>
+
+<script src="scripts/groceries.js"></script>
+<script src="scripts/main.js"></script>
+
+<h3>
+<footer class="sig">Designed by Cynthia Sheng 300091655</footer>
+</h3>
+
+
+</body>
+</html>
