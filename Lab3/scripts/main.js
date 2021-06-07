@@ -63,61 +63,61 @@ function populateListProductChoices(slct1, slct2) {
 		label.appendChild(document.createTextNode(productDetail));
 		if(productName=="white bread")
 		{
-			pic.src="assets/bread.JPG";
+			pic.src="assets/bread.jpg";
 			pic.height=100;
 			pic.width=100;
 		}
 		else if(productName=="brocoli")
 		{
-			pic.src="assets/brocoli.JPG";
+			pic.src="assets/brocoli.jpg";
 			pic.height=100;
 			pic.width=100;
 		}
 		else if(productName=="salmon")
 		{
-			pic.src="assets/salmon.JPG";
+			pic.src="assets/salmon.jpg";
 			pic.height=100;
 			pic.width=100;
 		}
 		else if(productName=="organic brocoli")
 		{
-			pic.src="assets/organic-brocoli.JPG";
+			pic.src="assets/organic-brocoli.jpg";
 			pic.height=100;
 			pic.width=100;
 		}
 		else if(productName=="tomato")
 		{
-			pic.src="assets/tomato.JPG";
+			pic.src="assets/tomato.jpg";
 			pic.height=100;
 			pic.width=100;
 		}
 		else if(productName=="yogurt")
 		{
-			pic.src="assets/yogurt.JPG";
+			pic.src="assets/yogurt.jpg";
 			pic.height=100;
 			pic.width=100;
 		}
 		else if(productName=="organic tomato")
 		{
-			pic.src="assets/organic-tomato.JPG";
+			pic.src="assets/organic-tomato.jpg";
 			pic.height=100;
 			pic.width=100;
 		}
 		else if(productName=="cereals")
 		{
-			pic.src="assets/cereals.JPG";
+			pic.src="assets/cereals.jpg";
 			pic.height=100;
 			pic.width=100;
 		}
 		else if(productName=="almond granola")
 		{
-			pic.src="assets/nuts.JPG";
+			pic.src="assets/nuts.jpg";
 			pic.height=100;
 			pic.width=100;
 		}
 		else if(productName=="milk chocolate")
 		{
-			pic.src="assets/chocolate.JPG";
+			pic.src="assets/chocolate.jpg";
 			pic.height=100;
 			pic.width=100;
 		}
