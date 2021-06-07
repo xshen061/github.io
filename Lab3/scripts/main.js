@@ -3,7 +3,7 @@
 // It is adapted from https://www.w3schools.com/howto/howto_js_tabs.asp
 
 function openInfo(evt, tabName) {
-
+     var i, tabcontent, tablinks;
 	// Get all elements with class="tabcontent" and hide them
 	tabcontent = document.getElementsByClassName("tabcontent");
 	for (i = 0; i < tabcontent.length; i++) {
@@ -43,6 +43,7 @@ function populateListProductChoices(slct1, slct2) {
 	for (i = 0; i < optionArray.length; i++) {
 		
 		var productName = optionArray[i];
+		var pic = document.createElement("img");
 		// create the checkbox and add in HTML DOM
 		var checkbox = document.createElement("input");
 		checkbox.type = "checkbox";
@@ -60,6 +61,68 @@ function populateListProductChoices(slct1, slct2) {
 		var label = document.createElement('label')
 		label.htmlFor = productDetail;
 		label.appendChild(document.createTextNode(productDetail));
+		if(productName=="white bread")
+		{
+			pic.src="assets/bread.JPG";
+			pic.height=100;
+			pic.width=100;
+		}
+		else if(productName=="brocoli")
+		{
+			pic.src="assets/brocoli.JPG";
+			pic.height=100;
+			pic.width=100;
+		}
+		else if(productName=="salmon")
+		{
+			pic.src="assets/salmon.JPG";
+			pic.height=100;
+			pic.width=100;
+		}
+		else if(productName=="organic brocoli")
+		{
+			pic.src="assets/organic-brocoli.JPG";
+			pic.height=100;
+			pic.width=100;
+		}
+		else if(productName=="tomato")
+		{
+			pic.src="assets/tomato.JPG";
+			pic.height=100;
+			pic.width=100;
+		}
+		else if(productName=="yogurt")
+		{
+			pic.src="assets/yogurt.JPG";
+			pic.height=100;
+			pic.width=100;
+		}
+		else if(productName=="organic tomato")
+		{
+			pic.src="assets/organic-tomato.JPG";
+			pic.height=100;
+			pic.width=100;
+		}
+		else if(productName=="cereals")
+		{
+			pic.src="assets/cereals.JPG";
+			pic.height=100;
+			pic.width=100;
+		}
+		else if(productName=="almond granola")
+		{
+			pic.src="assets/nuts.JPG";
+			pic.height=100;
+			pic.width=100;
+		}
+		else if(productName=="milk chocolate")
+		{
+			pic.src="assets/chocolate.JPG";
+			pic.height=100;
+			pic.width=100;
+		}
+		label.appendChild(document.createElement("br"));
+		label.appendChild(pic);
 		s2.appendChild(label);
 		
 		// create a breakline node and add in HTML DOM

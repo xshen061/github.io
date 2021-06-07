@@ -11,7 +11,7 @@
 
 <body>
 
-<div class="shop">SEG3125Lab SHOP</div>
+<h1>SEG3125 Lab SHOP</h1>
 
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
@@ -25,14 +25,17 @@
   <h3>Client Information</h3>
   <p>Tell us a bit about you.</p>
 	Choose a Preference:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-	<option value=""></option>
-	<option value="lactosefree">lactose-intolerant</option>
-    <option value="nutfree">nutfree</option>
-	<option value="both">both lactose-free and nutfree</option>
-	<option value="organic">organic</option>
-    <option value="None">None</option>
-	</select>
+     <br></br>
+	<input type="radio" id="lactosefree" name="dietSelect" value="lactosefree" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<label for="lactosefree">Lactose-Free</label><br>
+	<input type="radio" id="nutfree" name="dietSelect" value="nutfree" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<label for="nutfree">Nut-free</label><br>
+	<input type="radio" id="both" name="dietSelect" value="both" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<label for="both">Lactose-free and Nut-Free</label><br>
+	<input type="radio" id="organic" name="dietSelect" value="organic" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<label for="organic">Organic</label><br>
+	<input type="radio" id="None" name="dietSelect" value="None" onchange="populateListProductChoices(this.id, 'displayProduct')">
+	<label for="None">No preference</label><br>
 </div>
 
 <div id="Products" class="tabcontent">
