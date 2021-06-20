@@ -1,0 +1,320 @@
+<!-- This file is inspired by https://getbootstrap.com/docs/5.0/examples/carousel/ -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Lab 4 Physiotherapy Clinic</title>
+    <link href="styles/style.css" rel="stylesheet">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> 
+     
+    <!-- Custom styles for this template -->
+    <link href="styles/carousel.css" rel="stylesheet">	
+    </style>
+  </head>
+  <body>
+    
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+	  <img src="assets/company_logo.png" width="60" height="60">
+      <a class="navbar-brand" href="#">Lab4 Ottawa Physiotherapy Clinic </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="#">Locations</a>
+		  </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Forms</a>
+          </li>
+		  <li class="nav-item">
+            <a class="nav-link" href="#">Book Appointment</a>
+          </li>
+		   <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Example headline.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- Marketing messaging and featurettes
+  ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container marketing">
+
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+      <div class="col-lg-4">
+        <img src="assets/1.jpg" width="140" height="140">
+        <h2>Telerehab</h2>
+        <p>Our LIVE Video Appointments make it super easy and convenient for you to get in touch with a physiotherapist without leaving the comfort of home. </p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="assets/2.jpg" width="140" height="140">
+        <h2>Acupuncture</h2>
+        <p>Aсuрunсturе іѕ a tооl uѕеd іn Chіnеѕе medicine to bring thе bоdу back іntо bаlаnсе, thus hеаlіng patterns of disease. </p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="assets/3.jpg" width="140" height="140">
+        <h2>Massage Therapy</h2>
+        <p>Lіfе'ѕ ѕtrеѕѕоrѕ саn іnсludе wоrk, fаmіlу, аnd frіеndѕ. Mаѕѕаgе саn, аnd ѕhоuld, bе аn іmроrtаnt раrt оf уоur hеаlthу and well-rounded lіfеѕtуlе.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <img src="assets/4.jpg" width="140" height="140">
+        <h2>Sports Injuries</h2>
+        <p>Phуѕісаl therapists provide ѕеrvісеѕ tо prevent іnjurіеѕ, maintain рhуѕісаl hеаlth and орtіmіzе реrfоrmаnсе.</p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+      <img src="assets/5.jpg" width="140" height="140">
+        <h2>Custom Knee Brace</h2>
+        <p>Knее brасеѕ are devices used to trеаt numerous dіffеrеnt tуреѕ of іnjurіеѕ and dіаgnоѕеѕ. </p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+      <img src="assets/6.jpg" width="140" height="140">
+        <h2>Aqua Therapy</h2>
+        <p>Aquatic-therapy is treatments and exercises performed in water for relaxation, fitness or physical rehabilitation. </p>
+        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
+      </div><!-- /.col-lg-4 -->
+    </div><!-- /.row -->
+
+
+    <!-- START THE FEATURETTES -->
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Vicky LaBel <span class="text-muted">Registered Physiotherapist</span></h2>
+        <p class="lead">Vicki graduated with her Bachelor of Science in Physiotherapy from University of MacMaster in 2006.
+For 15 years she has worked in hospitals, in community care and in private clinics, specifying in the field of orthopaedics and sports injuries.</p>
+      </div>
+      <div class="col-md-5">
+      <img src="assets/doctor.jpg" width="500" height="500">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">Nick Brown <span class="text-muted">Registered Physiotherapist</span></h2>
+        <p class="lead">Nick completed his Bachelor of Science degree in Physiotherapy from the University of Toronto in 1989 and is a member of the College of Physiotherapists of Ontario. He is professonal in a wide range of techniques: acupuncture; craniosacral therapy; lymphatic drainage therapy; visceral manipulation; progress by exercise and other treatment forms.</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+      <img src="assets/doctor2.png" width="500" height="500">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <div class="row featurette">
+      <div class="col-md-7">
+        <h2 class="featurette-heading">Monica Belgin <span class="text-muted">Registered Physiotherapy</span></h2>
+        <p class="lead"> Monica is a bilingual therapist who completed her Bachelor of Science in Physiotherapy from the University of Ottawa in 2000.
+Through experiences in different areas of the physiotherapy field, Monica has a wide scope of knowledge to offer her patients with orthopaedic injuries/ailments as well as emerging professional athletes.</p>
+      </div>
+      <div class="col-md-5">
+      <img src="assets/doctor1.jpg" width="500" height="500">
+      </div>
+    </div>
+
+    <hr class="featurette-divider">
+
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+    <!-- Button trigger modal
+    https://getbootstrap.com/docs/5.0/components/modal/
+    -->
+    <div class ="d-grid gap-2">
+        
+		<button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Book Now!
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Book an Appointment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Select the type of appointment:
+                    <div class ="d-grid gap-2 btn-lg">
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="braces">Telerehab ($15/Hour)</option>
+							<option value="massage">Custom Knee Brace ($20/Hour)</option>
+                            <option value="massage">Aqua Therapy ($25/Hour)</option>
+							<option value="injury">Acupuncture ($35/Hour)</option>
+                            <option value="cryotherapy">Massage Therapy ($40/Hour)</option>
+                            <option value="acupuncture">Sports Injuries ($45/Hour)</option>
+                        </select>
+                    </div>
+                    <br>
+
+                    <label for="apptDate">Appointment Date</label><br>
+                    <div class ="d-grid gap-2 btn-lg">
+                        <input type="date" id="apptDate" name="apptDate"> 
+                    </div>
+
+                    <label for="apptTime">Appointment Time</label>
+                    <div class ="d-grid gap-2 btn-lg">
+                        <input type="time" id="apptTime" name="appt"> 
+                    </div>
+
+                    <label for="firstName">First Name</label>
+                    <div class ="d-grid gap-2 btn-lg">
+                        <input type="text" id="firstName" name="firstName"> 
+                    </div>
+                    <label for="lastName">Last Name</label>
+                    <div class ="d-grid gap-2 btn-lg">
+                        <input type="text" id="lastName" name="lastName"> 
+                    </div>
+                    <label for="birthday">Date of Birth</label>
+                    <div class ="d-grid gap-2 btn-lg">
+                        <input type="date" id="birthday" name="birthday"> 
+                    </div>
+                    <label for="email">Email</label>
+                    <div class ="d-grid gap-2 btn-lg">
+                        <input type="text" id="email" name="email"> 
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick=>Book Appointment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <!-- FOOTER -->
+  <footer class="container">
+  <div class="row">
+   <div class="col-lg-4">
+  	<p>Location: 801 King Edward Street, Ottawa, Ontario </p>
+	<p>Postal Code: A1A 1X1 </p>
+	<p>Phone: 613-111-1111</p>
+	<p>Opening Hours: Mon to Fri - 7:00 am - 11:00 pm</p>
+    <p>&copy; Lab 4 Physiotherapy Clinic &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+    <p>Designed by Cynthia Sheng</p>
+	</div>
+	<div class="col-lg-4">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2800.3172201179464!2d-75.68532158457124!3d45.423106379100446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce050a6db98d73%3A0x188a59c3622fdbae!2sUniversity%20of%20Ottawa!5e0!3m2!1sen!2sca!4v1623634702436!5m2!1sen!2sca" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+	<div class="col-lg-4">
+	<!-- code inspired by https://www.w3schools.com/howto/howto_css_contact_section.asp -->
+    <div class="column">
+      <form action="/action_page.php">
+	  <p> Contact Us</p>
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>	
+	</div>
+	<p class="float-end"><a href="#">Back to top</a></p>
+  </footer>
+</main>
+
+
+    <script src="scripts/clinic.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>     
+  </body>
+</html>
