@@ -30,14 +30,32 @@ function validateEmail(email) {
 }
 
 var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
+var dates=[[1,2],[3,4],[5,6]];
+var experts={"Vicky","Nick","Monica"];
 const setDateFormat = "mm/dd/yyyy";
 
+
 function disableDates(date) {
-    //  disable all Sundays and Saturdays
-    if (date.getDay() === 0 || date.getDay()==6)
+    //  disable all Sundays 
+	var expert= $("input[name='expert']:checked").val();
+    if (date.getDay() === 0)
         return [false];
+	if (dates[experts.indexOf(expert)].includes(date.getDay()) == false) {
+        return [false];
+    }
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
     return [ unavailableDates.indexOf(string) === -1 ]
+}
+
+function validateCreditCard(ccnum) {
+    var c = document.getElementById(ccnum).value;
+    var filter = /^\(?(\d{4})\)?[ ]?(\d{4})[ ]?(\d{4})[ ]?(\d{4})$/;
+    if (filter.test(c)) {
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 
 $(document).ready(function(){
@@ -62,17 +80,29 @@ $(document).ready(function(){
             $("#email").removeClass("error");
         }
     });
+	 $("#ccnum").on("change", function(){
+        if (!validateCreditCard("ccnum")){
+            alert("Wrong format for credit card");
+            $("#ccnumber").val("xxxx xxxx xxxx xxxx");
+            $("#ccnumber").addClass("error");
+        }
+        else {
+            $("#ccnumber").removeClass("error");
+        }
+    });
 	
-	$("#date" ).datepicker(
+	$(function() {
+	$("#datepicker" ).datepicker(
         {
             dateFormat: setDateFormat,
             minDate: 0,
             maxDate: '+4M',
-            // used to disable some dates
             beforeShowDay: $.datepicker.noWeekends,
             beforeShowDay: disableDates
         }
     );
+	 
+
 	
 	$("#ccnum").on("mouseenter", function(){
         $("#ccnum").addClass("showInput");
