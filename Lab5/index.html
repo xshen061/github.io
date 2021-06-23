@@ -73,35 +73,35 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="assets/building.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
 
         <div class="container">
           <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <h1>About Us</h1>
+            <p>We accept new patients! </p>
             <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="assets/room.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
 
         <div class="container">
           <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+            <h1>Welcome to our community!</h1>
+            <p> Enjoy your time! </p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse Gallery</a></p>
           </div>
         </div>
       </div>
       <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+        <img src="assets/services.jpg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
 
         <div class="container">
           <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+            <h1>We are right here for you!</h1>
+            <p>Check our services and make appointment online! </p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn More</a></p>
           </div>
         </div>
       </div>
@@ -167,10 +167,9 @@
     <!-- START THE FEATURETTES -->
 
     <hr class="featurette-divider">
-
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Vicky LaBel <span class="text-muted">Registered Physiotherapist</span></h2>
+        <h2 class="featurette-heading">Vicky LaBel </h2><span class="text-muted">Registered Physiotherapist</span>
         <p class="lead">Vicki graduated with her Bachelor of Science in Physiotherapy from University of MacMaster in 2006.
 For 15 years she has worked in hospitals, in community care and in private clinics, specifying in the field of orthopaedics and sports injuries.</p>
       </div>
@@ -183,7 +182,7 @@ For 15 years she has worked in hospitals, in community care and in private clini
 
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">Nick Brown <span class="text-muted">Registered Physiotherapist</span></h2>
+        <h2 class="featurette-heading">Nick Brown </h2><span class="text-muted">Registered Physiotherapist</span>
         <p class="lead">Nick completed his Bachelor of Science degree in Physiotherapy from the University of Toronto in 1989 and is a member of the College of Physiotherapists of Ontario. He is professonal in a wide range of techniques: acupuncture; craniosacral therapy; lymphatic drainage therapy; visceral manipulation; progress by exercise and other treatment forms.</p>
       </div>
       <div class="col-md-5 order-md-1">
@@ -195,7 +194,7 @@ For 15 years she has worked in hospitals, in community care and in private clini
 
     <div class="row featurette">
       <div class="col-md-7">
-        <h2 class="featurette-heading">Monica Belgin <span class="text-muted">Registered Physiotherapy</span></h2>
+        <h2 class="featurette-heading">Monica Belgin </h2><span class="text-muted">Registered Physiotherapy</span>
         <p class="lead"> Monica is a bilingual therapist who completed her Bachelor of Science in Physiotherapy from the University of Ottawa in 2000.
 Through experiences in different areas of the physiotherapy field, Monica has a wide scope of knowledge to offer her patients with orthopaedic injuries/ailments as well as emerging professional athletes.</p>
       </div>
@@ -246,7 +245,7 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
             </div></div>
 			<div class="row">
               <div class="col-50">
-		       <label for="state">Province</label>
+		       <label for="state"><img src="assets/canada.png"> Province</label>
 			   <select name="state" id="states">
      		<option selected disabled value="">Choose...</option>
 			<option>Alberta</option>
@@ -268,7 +267,7 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
     </div>
         </div>
               <div class="col-50">
-                <label for="zip">Postal Code <span style="color:#ff0000">*</span></label>
+                <label for="zip"><i class="fa fa-map"></i> Postal Code <span style="color:#ff0000">*</span></label>
                 <input type="text" id="zip" name="zip" placeholder="A1A 1A1" required>
               </div>
             </div>
@@ -299,19 +298,20 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
 	      <form action="/action_page.php">
          <div class="row">
           <div class="col-50">
+		  <!--icon from icons8.com-->
 			<h3>Select the type of appointment:<span style="color:#ff0000">*</span></h3>   <br>            		            
-           <input type="radio" id="s1"  value="services" name="services">			            
-			<label for="s1">Telerehab ($15/Hour) </label><br>
+           <input type="radio" id="s1"  value="services" name="services" checked>			            
+			<label for="s1"><i class="fa fa-video-camera"></i> Telerehab ($15/Hour) </label><br>
 			<input type="radio" id="s2"  value="services" name="services">           
-			<label for="s2">Custom Knee Brace ($20/Hour) </label><br>
+			<label for="s2"><img src="assets/knee.png"> Custom Knee Brace ($20/Hour) </label><br>
             <input type="radio" id="s3"  value="services" name="services">
-			<label for="s3">Aqua Therapy ($25/Hour) </label><br>
+			<label for="s3"><img src="assets/swim.png"> Aqua Therapy ($25/Hour) </label><br>
             <input type="radio" id="s4"  value="services" name="services">
-			<label for="s4">Acupuncture ($35/Hour) </label><br>
+			<label for="s4"><img src="assets/acupuncture.png">  Acupuncture ($35/Hour) </label><br>
 			<input type="radio" id="s5"  value="services" name="services">
-			<label for="s5">Massage Therapy ($40/Hour) </label> <br>
+			<label for="s5"><img src="assets/massage.png"> Massage Therapy ($40/Hour) </label> <br>
             <input type="radio" id="s6"  value="services" name="services">			
-	        <label for="s6">Sports Injuries ($45/Hour) </label> <br> 	
+	        <label for="s6"><img src="assets/physician.png"> Sports Injuries ($45/Hour) </label> <br> 	
 				</div>
           <div class="col-50">
            	<h3>Select the expert you would like to meet with:</h3>   <br>  
@@ -324,9 +324,12 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
  	         	</div>
 			<label for="datepicker">Appointment Date <span style="color:#ff0000">*</span></label>                   
             <input type="text" class="datepicker" id="datepicker" name="datepicker" required> 
-<!-- 			<label for="time">Appointment Time <span style="color:#ff0000">*</span></label>
-            <input type="time" id="time" name="time"  required>   -->
-            </div>
+    <label for="appt-time">Choose an appointment time (opening hours 07:00 to 21:00): <span style="color:#ff0000">*</label>
+    <input id="appt-time" type="time" name="appt-time"
+           min="08:00" max="16:00" required
+           pattern="[0-9]{2}:[0-9]{2}">
+    <span class="validity"></span>
+            </div><br>
 		   <div class="row">
 		    <div class="col-50">
 			  <button class="btn btn-primary" type="submit">Continue</button>
@@ -413,7 +416,7 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
   	<p>Location: 801 King Edward Street, Ottawa, Ontario </p>
 	<p>Postal Code: A1A 1X1 </p>
 	<p>Phone: 613-111-1111</p>
-	<p>Opening Hours: Mon to Fri - 7:00 am - 11:00 pm</p>
+	<p>Opening Hours: Mon to Fri - 8:00 - 16:00 </p>
     <p>&copy; Lab 4 Physiotherapy Clinic &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
     <p>Designed by Cynthia Sheng</p>
 	</div>

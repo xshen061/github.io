@@ -115,6 +115,8 @@ function validateCreditCard(ccnum) {
     })
 })()
 
+
+		
 $(document).ready(function(){
     $("#tel").on("change", function(){
         if (!validatePhone("phone")){
