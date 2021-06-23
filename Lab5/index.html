@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <title>New Physiotherapy Clinic</title>
-
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> 
+   	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>     
+  
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 
     <link href="styles/style.css" rel="stylesheet">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> 
-   	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
     <link href="styles/carousel.css" rel="stylesheet">	
  	<script src="scripts/clinic.js"></script>  
 
@@ -209,7 +209,7 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
  
     <hr class="featurette-divider">
  
-	        <h3>Book Appointment</h3>
+	        <h3>Register</h3>
 
   </div>
 <div class="row">
@@ -218,10 +218,15 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
       <form action="/action_page.php">
 	    <div class="row">
           <div class="col-50">
+		  <div class="row">
+		  <div class="col-50">
             <label for="fname"><i class="fa fa-user"></i> First Name<span style="color:#ff0000">*</span></label>
             <input type="text" id="fname" name="firstname" placeholder="John" required>
+			</div>
+			<div class="col-50">
 			<label for="lname"><i class="fa fa-user"></i> Last Name <span style="color:#ff0000">*</span></label>
             <input type="text" id="lname" name="lastname" placeholder="Smith" required>
+			</div></div>
 			<div class="row">
               <div class="col-50">
 			    <label for="tel"><i class="fa fa-phone"></i>Phone Number <span style="color:#ff0000">*</span></label>
@@ -232,67 +237,112 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
                 <input type="text" id="email" name="email" placeholder="John@example.com" required>
 			  </div>
 			</div>
+			<div class="row">
+              <div class="col-50">
             <label for="adr"><i class="fa fa-address-card-o"></i> Address <span style="color:#ff0000">*</span></label>
             <input type="text" id="adr" name="address" placeholder="111 Street" required>
-            <label for="city"><i class="fa fa-institution"></i> City <span style="color:#ff0000">*</span></label>
+            </div>
+			<div class="col-50">
+			<label for="city"><i class="fa fa-institution"></i> City <span style="color:#ff0000">*</span></label>
             <input type="text" id="city" name="city" placeholder="Ottawa" required>
-            <div class="row">
+            </div></div>
+			<div class="row">
               <div class="col-50">
-                <label for="state">Province</label>
-                <input type="text" id="state" name="state" placeholder="Ontario">
-              </div>
+		       <label for="state">Province</label>
+			   <select name="state" id="states">
+     		<option selected disabled value="">Choose...</option>
+			<option>Alberta</option>
+			<option>British Columbia</option>
+			<option>Manitoba</option>
+			<option>New Brunswick</option>
+			<option>NewFoundland and Labrador</option>
+			<option>Northwest Territories</option>
+			<option>Nova Scotia</option>
+			<option>Nunavut</option>
+			<option>Ontario</option>
+			<option>Prince Edward Island</option>
+			<option>Quebec</option>
+			<option>Saskatchewan</option>
+			<option>Yukon</option>
+		</select>
+    <div class="invalid-tooltip">
+      Please select a valid Province.
+    </div>
+        </div>
               <div class="col-50">
                 <label for="zip">Postal Code <span style="color:#ff0000">*</span></label>
                 <input type="text" id="zip" name="zip" placeholder="A1A 1A1" required>
               </div>
             </div>
           </div>
-		  <div class="col-50">
-         
-			<h3>Select the type of appointment:<span style="color:#ff0000">*</span></h3>   <br>
-            		
-            <input type="radio" id="s1"  value="tele">
-			<label for="s1">Telerehab ($15/Hour) </label><br>   
-            <input type="radio" id="s2"  value="braces">
+  </div>
+  <div class="col-12">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+      <label class="form-check-label" for="invalidCheck">
+        Agree to terms and conditions
+      </label>
+      <div class="invalid-feedback">
+        You must agree before submitting.
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</form>
+       </div>
+    </div>
+  </div> 
+
+<div class="row">
+  <div class="col-75">	
+      <div class="container"><br>
+	      <form action="/action_page.php">
+         <div class="row">
+          <div class="col-50">
+			<h3>Select the type of appointment:<span style="color:#ff0000">*</span></h3>   <br>            		            
+           <input type="radio" id="s1"  value="services" name="services">			            
+			<label for="s1">Telerehab ($15/Hour) </label><br>
+			<input type="radio" id="s2"  value="services" name="services">           
 			<label for="s2">Custom Knee Brace ($20/Hour) </label><br>
-            <input type="radio" id="s3"  value="aqua">
+            <input type="radio" id="s3"  value="services" name="services">
 			<label for="s3">Aqua Therapy ($25/Hour) </label><br>
-            <input type="radio" id="s4"  value="acupuncture">
+            <input type="radio" id="s4"  value="services" name="services">
 			<label for="s4">Acupuncture ($35/Hour) </label><br>
-            <input type="radio" id="s5"  value="massage">
-			<label for="s5">Massage Therapy ($40/Hour) </label><br>
-            <input type="radio" id="s6"  value="injury">
-            <label for="s6">Sports Injuries ($45/Hour) </label>                 
-	                      <br></br>
+			<input type="radio" id="s5"  value="services" name="services">
+			<label for="s5">Massage Therapy ($40/Hour) </label> <br>
+            <input type="radio" id="s6"  value="services" name="services">			
+	        <label for="s6">Sports Injuries ($45/Hour) </label> <br> 	
+				</div>
+
+          <div class="col-50">
            	<h3>Select the expert you would like to meet with:</h3>   <br>  
 			<input type="radio" id="Vicky" name="expert" value="expert" checked="checked">
-			<label for="expert">Vicky LaBel</label><br>   
+			<label for="expert">Vicky LaBel</label>  <br> 
             <input type="radio" id="Nick"  name="expert" value="expert" >
 			<label for="expert">Nick Brown </label><br>
             <input type="radio" id="Monica" name= "expert" value="expert">
-			<label for="expert">Monica Belgin</label><br>  <br>
-			<label for="datepicker">Appointment Date <span style="color:#ff0000">*</span></label><br>                    
+			<label for="expert">Monica Belgin</label> <br>
+			<label for="datepicker">Appointment Date <span style="color:#ff0000">*</span></label>                   
             <input type="text" class="datepicker" id="datepicker" name="datepicker" required> 
 
 			<label for="time">Appointment Time <span style="color:#ff0000">*</span></label>
             <input type="time" id="time" name="time"  required>                     
-              </div>
-			  
-
-			  
-           </div>
+ 	         	</div>
+            </div>
 		   <div class="row">
 		    <div class="col-50">
-			  <input type="submit" class="btn btn-lg btn-primary" value="Continue">
+			  <button class="btn btn-primary" type="submit">Continue</button>
 			  </div>
 			<div class="col-50">
-			  <input type="submit" class="btn btn-lg btn-primary" value="Reset">
+			  <button class="btn btn-primary" type="submit">Reset</button>
 			  </div>
            </div>
 	 </form>
     </div>
-  </div>
-</div>	
+	</div>
+</div>
 <!-- Referenced from https://www.w3schools.com/howto/howto_css_checkout_form.asp -->
 <div class="row">
   <div class="col-75">
@@ -354,12 +404,12 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
         </div>
         <label>
           <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
-        </label>
-        <input type="submit" value="Continue to checkout" class="btn">
+        </label><br>
+        <button class="btn btn-primary" type="submit">Continue to Purchase</button>
       </form>
     </div>
   </div>
-</div>
+ </div>
   <!-- FOOTER -->
   <footer class="container">
   <div class="row">

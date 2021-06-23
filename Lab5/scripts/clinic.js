@@ -39,7 +39,7 @@ var experts={"Vicky","Nick","Monica"];
 const setDateFormat = "mm/dd/yyyy";
 
 
-function disableDates(date) {
+/* function disableDates(date) {
     //  disable all Sundays 
 	var expert= $("input[name='expert']:checked").val();
     if (date.getDay() === 0)
@@ -47,6 +47,17 @@ function disableDates(date) {
 	if (dates[experts.indexOf(expert)].includes(date.getDay()) == false) {
         return [false];
     }
+    var string = jQuery.datepicker.formatDate(setDateFormat, date);
+    return [ unavailableDates.indexOf(string) === -1 ]
+} */
+
+var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
+const setDateFormat = "mm/dd/yy";
+
+function disableDates(date) {
+    // Sunday is Day 0, disable all Sundays
+    if (date.getDay() === 0)
+        return [false];
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
     return [ unavailableDates.indexOf(string) === -1 ]
 }
@@ -61,6 +72,27 @@ function validateCreditCard(ccnum) {
         return false;
     }
 }
+
+//https://getbootstrap.com/docs/5.0/forms/validation/
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
 
 $(document).ready(function(){
     $("#tel").on("change", function(){
@@ -95,7 +127,7 @@ $(document).ready(function(){
         }
     });
 	
-	$(function() {
+
 	  $("#datepicker" ).datepicker(
         {
             dateFormat: setDateFormat,
@@ -105,7 +137,7 @@ $(document).ready(function(){
             beforeShowDay: disableDates
         }
     );
-	}); 
+
 
 	
 	$("#ccnum").on("mouseenter", function(){
