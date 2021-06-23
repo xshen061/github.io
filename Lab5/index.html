@@ -7,15 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <title>New Physiotherapy Clinic</title>
-     <link href="styles/style.css" rel="stylesheet">
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> 
+
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+    <link href="styles/style.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> 
    	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>     
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
- <link href="styles/carousel.css" rel="stylesheet">	
-	<script src="scripts/clinic.js"></script>
- 	<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/themes/excite-bike/jquery-ui.css" rel="stylesheet" type="text/css">
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+    <link href="styles/carousel.css" rel="stylesheet">	
+ 	<script src="scripts/clinic.js"></script>  
+
   </head>
   <body>
     
@@ -181,7 +184,6 @@ For 15 years she has worked in hospitals, in community care and in private clini
     </div>
 
     <hr class="featurette-divider">
-
     <div class="row featurette">
       <div class="col-md-7 order-md-2">
         <h2 class="featurette-heading">Nick Brown</h2> <span class="text-muted">Registered Physiotherapist</span><br></br>
@@ -204,14 +206,12 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
       <img src="assets/doctor1.jpg" width="500" height="500">
       </div>
     </div>
-
+ 
     <hr class="featurette-divider">
-
+ 
 	        <h3>Book Appointment</h3>
-    
-    <!-- /END THE FEATURETTES -->
+
   </div>
-  
 <div class="row">
   <div class="col-75">
     <div class="container">
@@ -271,18 +271,15 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
 			<label for="expert">Nick Brown </label><br>
             <input type="radio" id="Monica" name= "expert" value="expert">
 			<label for="expert">Monica Belgin</label><br>  <br>
-		   <div class="row">
-            <div class="col-50">
 			<label for="datepicker">Appointment Date <span style="color:#ff0000">*</span></label><br>                    
-            <input type="text" id="datepicker" name="date" required> 
-            </div>
-            <div class="col-50">
+            <input type="text" class="datepicker" id="datepicker" name="datepicker" required> 
+
 			<label for="time">Appointment Time <span style="color:#ff0000">*</span></label>
             <input type="time" id="time" name="time"  required>                     
-              </div></div>
+              </div>
 			  
 
-			  </div>
+			  
            </div>
 		   <div class="row">
 		    <div class="col-50">

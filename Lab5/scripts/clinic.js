@@ -105,7 +105,7 @@ $(document).ready(function(){
             beforeShowDay: disableDates
         }
     );
-	 
+	}); 
 
 	
 	$("#ccnum").on("mouseenter", function(){
