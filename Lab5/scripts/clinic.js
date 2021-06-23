@@ -34,33 +34,54 @@ function validateEmail(email) {
 }
 
 var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
-var dates=[[1,2],[3,4],[5,6]];
-var experts={"Vicky","Nick","Monica"];
-const setDateFormat = "mm/dd/yyyy";
-
-
-/* function disableDates(date) {
-    //  disable all Sundays 
-	var expert= $("input[name='expert']:checked").val();
-    if (date.getDay() === 0)
-        return [false];
-	if (dates[experts.indexOf(expert)].includes(date.getDay()) == false) {
-        return [false];
-    }
-    var string = jQuery.datepicker.formatDate(setDateFormat, date);
-    return [ unavailableDates.indexOf(string) === -1 ]
-} */
-
-var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
 const setDateFormat = "mm/dd/yy";
 
+
 function disableDates(date) {
-    // Sunday is Day 0, disable all Sundays
+    //  disable all Sundays 
     if (date.getDay() === 0)
         return [false];
+      
+	  var expert= document.getElementsByName("expert");
+      var exp;
+
+      for(var i = 0; i < expert.length; i++) {
+        if(expert[i].checked) {
+          exp = expert[i].value;
+        }
+      }
+      if(exp == "Vicky"){
+        if(date.getDay() === 5 || date.getDay() === 6) {  /*Vicky doesnt work on Fridays and Saturdays*/
+            return [false, "not in", "Vicky has Friday and Saturday off"]
+        }
+        else {
+          return [true, "", ""]
+        }
+      }
+
+    if(exp == "Nick"){
+      if(date.getDay() === 0 || date.getDay() === 3) {  /*Nick doesn't work on Sundays or Wednesdays*/
+            return [false, "not in", "Nick has Sunday and Wednesday off"]
+      }
+      else {
+        return [true, "", ""]
+      }
+    }
+
+    if(exp == "Monica"){
+      if (date.getDay() === 2 || date.getDay() === 4) {  /*Monica doesnt work on Tuesdays or Thursdays*/
+            return [false, "not in", "Monica has Tuesday and Thursday off"]
+      }
+      else {
+        return [true, "", ""]
+      }
+    }
+  
+
     var string = jQuery.datepicker.formatDate(setDateFormat, date);
     return [ unavailableDates.indexOf(string) === -1 ]
 }
+
 
 function validateCreditCard(ccnum) {
     var c = document.getElementById(ccnum).value;
