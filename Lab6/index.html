@@ -218,16 +218,16 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
 		  <div class="row">
 		  <div class="col-50">
             <label for="fname"><i class="fa fa-user"></i> First Name<span style="color:#ff0000">*</span></label>
-            <input type="text" id="fname" name="firstname" placeholder="John" required>
+            <input type="text" id="fname" name="fname" placeholder="John" required>
 			</div>
 			<div class="col-50">
 			<label for="lname"><i class="fa fa-user"></i> Last Name <span style="color:#ff0000">*</span></label>
-            <input type="text" id="lname" name="lastname" placeholder="Smith" required>
+            <input type="text" id="lname" name="lname" placeholder="Smith" required>
 			</div></div>
 			<div class="row">
               <div class="col-50">
 			    <label for="tel"><i class="fa fa-phone"></i>Phone Number <span style="color:#ff0000">*</span></label>
-    		    <input type="text" id="tel" name="phone"  placeholder="111-222-3333" required> <!--pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"-->
+    		    <input type="text" id="tel" name="tel"  placeholder="1234567890 or (123) 456-7890" required> <!--pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"-->
 			  </div>
               <div class="col-50">
 			    <label for="email"><i class="fa fa-envelope"></i> Email Address <span style="color:#ff0000">*</span></label>
@@ -352,7 +352,7 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
           <div class="col-50">
             <h3>Billing Address</h3>
             <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+            <input type="text" id="name" name="name" placeholder="John M. Doe">
             <label for="email"><i class="fa fa-envelope"></i> Email</label>
             <input type="text" id="email" name="email" placeholder="john@example.com">
             <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
@@ -362,9 +362,26 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
 
             <div class="row">
               <div class="col-50">
-                <label for="state"><img src="assets/canada.png">Province</label>
-                <input type="text" id="state" name="state" placeholder="Ottawa">
-              </div>
+		       <label for="state"><img src="assets/canada.png"> Province</label>
+			   <select name="state" id="states">
+     		<option selected disabled value="">Choose...</option>
+			<option>Alberta</option>
+			<option>British Columbia</option>
+			<option>Manitoba</option>
+			<option>New Brunswick</option>
+			<option>NewFoundland and Labrador</option>
+			<option>Northwest Territories</option>
+			<option>Nova Scotia</option>
+			<option>Nunavut</option>
+			<option>Ontario</option>
+			<option>Prince Edward Island</option>
+			<option>Quebec</option>
+			<option>Saskatchewan</option>
+			<option>Yukon</option>
+		</select>
+    <div class="invalid-tooltip">
+      Please select a valid Province.
+    </div></div>
               <div class="col-50">
                 <label for="zip"><i class="fa fa-map"></i> Postal Code</label>
                 <input type="text" id="zip" name="zip" placeholder="A1A 1A1">
@@ -381,21 +398,30 @@ Through experiences in different areas of the physiotherapy field, Monica has a 
               <i class="fa fa-cc-mastercard" style="color:red;"></i>
               <i class="fa fa-cc-discover" style="color:orange;"></i>
             </div>
-            <label for="cname">Name on Card</label>
-            <input type="text" id="cname" name="cardname" placeholder="John More Doe">
-            <label for="ccnum">Credit card number</label>
-            <input type="text" id="ccnum" name="cardnumber" placeholder="1111 2222 3333 4444">
-            <label for="expmonth">Exp Month</label>
-            <input type="text" id="expmonth" name="expmonth" placeholder="September">
+            <label for="cname">Name on Card<span style="color:#ff0000">*</span></label><br>
+			<small class="text-muted">Full name as displayed on card</small>
+              <div class="invalid-tooltip">
+                Name on card is required
+              </div>
+            <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
+ 
+            <label for="ccnum">Credit card number<span style="color:#ff0000">*</span></label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111 2222 3333 4444" required>
 
             <div class="row">
               <div class="col-50">
-                <label for="expyear">Exp Year</label>
-                <input type="text" id="expyear" name="expyear" placeholder="2018">
+              <label for="cc-expiration" class="form-label">Expiration<span style="color:#ff0000">*</span></label>
+              <input type="text" class="form-control" id="cc-expiration" placeholder="MM/YY" required>
+              <div class="invalid-tooltip">
+                Expiration date required, please enter a valid expiration date.
+              </div>
               </div>
               <div class="col-50">
-                <label for="cvv">CVV</label>
-                <input type="text" id="cvv" name="cvv" placeholder="352">
+              <label for="cc-cvv" class="form-label">CVV<span style="color:#ff0000">*</span></label>
+              <input type="text" class="form-control" id="cc-cvv" placeholder="123" required>
+              <div class="invalid-tooltip">
+                Security code required
+              </div>
               </div>
             </div>
           </div>

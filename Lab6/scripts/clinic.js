@@ -8,8 +8,41 @@
 
 /*
 The following is my code*/
+// reference from https://www.codexworld.com/how-to/validate-first-last-name-with-regular-expression-using-javascript/
+function validateName(name) {
+    var n = document.getElementById(name).value;
 
+    var filter =  /^[a-zA-Z]+ [a-zA-Z]+$/;
+    if (filter.test(n)) {
+        return true;
+    }
+    else {		
+        return false;
+    }
+}
 
+function validateFname(fname) {
+    var n = document.getElementById(fname).value;
+
+    var filter =  /^[a-zA-Z]+ [a-zA-Z]+$/;
+    if (filter.test(n)) {
+        return true;
+    }
+    else {		
+        return false;
+    }
+}
+function validateLname(lname) {
+    var n = document.getElementById(lname).value;
+
+    var filter =  /^[a-zA-Z]+ [a-zA-Z]+$/;
+    if (filter.test(n)) {
+        return true;
+    }
+    else {		
+        return false;
+    }
+}
 function validatePhone(tel) {
     var a = document.getElementById(tel).value;
 
@@ -25,14 +58,24 @@ function validatePhone(tel) {
 function validateEmail(email) {
     var e = document.getElementById(email).value;
     var filter = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-    if (filter.test(a)) {
+    if (filter.test(e)) {
         return true;
     }
     else {		
         return false;
     }
 }
+function validateCvv(cc-cvv) {
+    var n = document.getElementById(cc-cvv).value;
 
+    var filter =  /^[0-9]{3}$/;
+    if (filter.test(n)) {
+        return true;
+    }
+    else {		
+        return false;
+    }
+}
 var unavailableDates = ["06/29/2020","07/07/2020","07/10/2020"];
 const setDateFormat = "mm/dd/yy";
 
@@ -118,8 +161,40 @@ function validateCreditCard(ccnum) {
 
 		
 $(document).ready(function(){
+	$("#name").on("change", function(){
+        if (!validateName("name")){
+            alert("Wrong format for name");
+            $("#name").val("please enter your full name");
+            $("#name").addClass("error");
+        }
+        else {
+            $("#name").removeClass("error");
+        }
+    });
+
+	$("#fname").on("change", function(){
+        if (!validateFname("fname")){
+            alert("Wrong format for first name");
+            $("#fname").val("please enter your first name");
+            $("#fname").addClass("error");
+        }
+        else {
+            $("#fname").removeClass("error");
+        }
+    });
+	
+	$("#lname").on("change", function(){
+        if (!validateLname("lname")){
+            alert("Wrong format for last name");
+            $("#lname").val("please enter your last name");
+            $("#lname").addClass("error");
+        }
+        else {
+            $("#lname").removeClass("error");
+        }
+    });
     $("#tel").on("change", function(){
-        if (!validatePhone("phone")){
+        if (!validatePhone("tel")){
             alert("Wrong format for phone");
             $("#tel").val("1234567890 or (123) 456-7890");
             $("#tel").addClass("error");
@@ -149,7 +224,16 @@ $(document).ready(function(){
             $("#ccnumber").removeClass("error");
         }
     });
-	
+	    $("#cc-cvv").on("change", function(){
+        if (!validateCvv("cc-cvv")){
+            alert("Wrong format for CVV");
+            $("#cc-cvv").val("123");
+            $("#cc-cvv").addClass("error");
+        }
+        else {
+            $("#cc-cvv").removeClass("error");
+        }
+    });
 
 	  $("#datepicker" ).datepicker(
         {
