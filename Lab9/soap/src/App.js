@@ -14,7 +14,7 @@ import Footer from './components/Footer';
 import Container from '@material-ui/core/Container';
 import Divider from "@material-ui/core/Divider";
 import Checkout from "./components/pages/Checkout";
-
+import ChatIcon from '@material-ui/icons/Chat';
 import Fab from "@material-ui/core/Fab";
 
 
@@ -65,7 +65,7 @@ function App() {
         </Container>
 
         <Fab style={{position:'fixed',bottom:"2rem",right:"2rem",zIndex:"1000"}} color="primary" aria-label="add">
-  
+        <ChatIcon />
 </Fab>
       </Router>
     </div>
