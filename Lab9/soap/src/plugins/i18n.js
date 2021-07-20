@@ -1,5 +1,9 @@
-{
-    "nav.catalog":"Catalogue",
+const messages = {
+'en':{
+
+},
+'fr':{
+    nav.catalog:'Catalogue',
     "nav.about":"À propos",
     "nav.login":"S'identifier",
     "nav.signup":"S'inscrire",
@@ -12,7 +16,7 @@
     "signup.emailErr":"Utilisez le format example@email.com",
     "signup.password":"Mot de passe",
     "signup.passwordErr":"Ne répond pas aux exigences de longueur (5)",
-    "login.title":"Se connecter à codebytes",
+    "login.title":"Se connecter à Lab9",
     "login.button":"S'identifier",
     "footer.about":"À propos",
     "footer.careers":"Carrières",
@@ -42,5 +46,15 @@
     "checkout.complete":"Paiement complet",
     "checkout.courseReg":"Cours enregistré!",
     "checkout.title":"La caisse",
-    "card.button":"Apprendre encore plus"
+    "card.button":"Apprendre encore plus"  
 }
+
+
+
+
+
+
+
+
+
+};
