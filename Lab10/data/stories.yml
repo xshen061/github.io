@@ -9,9 +9,8 @@ stories:
    - action: utter_goodbye
    - intent: subscribe
    - action: newsletter_form
-   - active_loop: newsletter_form
-  
-  - story: greet and unsubscribe
+   - active_loop: newsletter_form 
+ - story: greet and unsubscribe
    steps:
    - intent: greet
    - action: utter_greet
