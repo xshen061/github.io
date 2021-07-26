@@ -6,8 +6,14 @@ intents:
 - greet
 - inform
 - subscribe
+- unsubscribe
+- thankyou
+- goodbye
 slots:
   email:
+    type: unfeaturized
+    influence_conversation: false
+  reason:
     type: unfeaturized
     influence_conversation: false
 responses:
@@ -16,6 +22,12 @@ responses:
       Hello! How can I help you?
   - text: |
       Hi!
+  - text: |
+      Good morning!
+  - text: |
+      Good afternoon!
+  - text: |
+      Good evening!
   utter_ask_email:
   - text: |
       What is your email address?
@@ -23,12 +35,52 @@ responses:
   - text: |
       Check your inbox at {email} in order to finish subscribing to the newsletter!
   - text: You're all set! Check your inbox at {email} to confirm your subscription.
+  utter_thankyou:
+  - text: |
+      Your welcome!
+  - text: |
+      Glad I could help!
+  - text: |
+      My pleasure!
+  - text: |
+      No problem!
+  utter_goodbye:
+  - text: |
+      Goodbye!
+  - text: |
+      See you!
+  - text: |
+      Have a great day!
+  - text: |
+      Enjoy your day! 
+  - text: |
+      See you!      
+  utter_ask_unsubscribe:
+   - text: |
+      What's the reason for you to unsubscribe?
+  utter_unsubscribe:
+  - text: |
+      Okay, we understand.
+  - text: |
+      We're sorry to see you go.
+  - text: |
+      No problem.
+  - text: |
+      If you ever change your mind, let us know.
 actions:
 - '...'
 - utter_greet
 - utter_subscribed
+- utter_ask_unsubscribe
+- utter_unsubscribe
+- utter_thankyou
+- utter_goodbye
 forms:
   newsletter_form:
     required_slots:
       email:
+      - type: from_text
+  unsubscribe_form:
+    required_slots:
+      reason:
       - type: from_text

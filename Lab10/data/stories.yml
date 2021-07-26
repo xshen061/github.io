@@ -3,6 +3,19 @@ stories:
    steps:
    - intent: greet
    - action: utter_greet
+   - intent: thankyou
+   - action: utter_thankyou
+   - intent: goodbye
+   - action: utter_goodbye
    - intent: subscribe
    - action: newsletter_form
    - active_loop: newsletter_form
+  
+  - story: greet and unsubscribe
+   steps:
+   - intent: greet
+   - action: utter_greet
+   - intent: unsubscribe
+   - action: utter_ask_unsubscribe
+   - action: unsubscribe_form
+   - active_loop: unsubscribe_form

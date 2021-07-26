@@ -12,3 +12,35 @@ responses:
            Check your inbox at {email} in order to finish subscribing to the newsletter!
        - text: |
            You're all set! Check your inbox at {email} to confirm your subscription.
+   utter_thankyou:
+       - text: |
+           Your welcome!
+       - text: |
+           Glad I could help!
+       - text: |
+           My pleasure!
+       - text: |
+           No problem!
+   utter_goodbye:
+       - text: |
+           Goodbye!
+       - text: |
+           See you!
+       - text: |
+           Have a great day!
+       - text: |
+           Enjoy your day! 
+       - text: |
+           See you!      
+   utter_ask_unsubscribe:
+        - text: |
+           What's the reason for you to unsubscribe?
+   utter_unsubscribe:
+       - text: |
+           Okay, we understand.
+       - text: |
+           We're sorry to see you go.
+       - text: |
+           No problem.
+       - text: |
+           If you ever change your mind, let us know.

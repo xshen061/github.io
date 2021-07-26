@@ -12,3 +12,10 @@ rules:
    - action: newsletter_form
    - active_loop: null
    - action: utter_subscribed
+  
+ - rule: activate unsubscribe form
+   steps:
+    - intent: unsubscribe
+    - action: utter_ask_unsubscribe
+    - action: unsubscribe_form
+    - active_loop: unsubscribe_form
