@@ -39,3 +39,12 @@ nlu:
     - Thx
     - Appreciate your help!
     - Appreicate!
+
+- intent: goodbye
+  examples: |
+    - Goodbye
+    - Bye
+    - Have a nice day
+    - Have a great day
+    - enjoy your day
+    - see you
